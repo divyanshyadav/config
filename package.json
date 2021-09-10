@@ -5,6 +5,7 @@
     "main": "index.js",
     "scripts": {
         "test": "jest",
+        "test:watch": "npm run test -- --watch",
         "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|json|css|html|md)\"",
         "build": "echo build"
     },
