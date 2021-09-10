@@ -1,0 +1,39 @@
+{
+    "name": "configs",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest",
+        "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|json|css|html|md)\"",
+        "build": "echo build"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged && npm run build"
+        }
+    },
+    "lint-staged": {
+        "**/*.+(js|json|css|html|md)": [
+            "prettier",
+            "jest --findRelatedTests",
+            "git add"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/divyanshyadav/config.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/divyanshyadav/config/issues"
+    },
+    "homepage": "https://github.com/divyanshyadav/config#readme",
+    "devDependencies": {
+        "husky": "^4.3.8",
+        "jest": "^27.1.1",
+        "lint-staged": "^11.1.2",
+        "prettier": "^2.4.0"
+    }
+}
