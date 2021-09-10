@@ -1,1 +1,3 @@
-console.log('Dummy project')
+import { greet } from './module'
+
+greet('Roy')
